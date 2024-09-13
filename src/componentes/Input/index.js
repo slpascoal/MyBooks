@@ -9,7 +9,8 @@ export const Input = styled.input`
     width: 200px;
     color: #FFF;
     font-size: 16px;
-     margin-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 
     &::placeholder {
         color: #FFF;
