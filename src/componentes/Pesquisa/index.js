@@ -1,33 +1,32 @@
 import { Input } from '../Input'
-import style from 'styled-components'
+import styled from 'styled-components'
 import { useState } from 'react'
 import { livros } from './dadosPesquisa'
 
-const PesquisaContainer = style.section`
+const PesquisaContainer = styled.section`
         background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
         color: #FFF;
         text-align: center;
-        padding: 85px 0;
+        padding: 65px 0;
         height: 270px;
         width: 100%;
-
         
 `
 
-const Titulo = style.h2`
+const Titulo = styled.h2`
         color: #FFF;
         font-size: 36px;
         text-align: center;
         width: 100%;
 `
 
-const Subtitulo = style.h3`
+const Subtitulo = styled.h3`
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 40px;
 `
 
-const ResultadoContainer = style.div`
+const ResultadoContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -35,7 +34,7 @@ const ResultadoContainer = style.div`
   width: 55%;
 `
 
-const Resultado = style.div`
+const Resultado = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
