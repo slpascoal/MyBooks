@@ -1,4 +1,4 @@
-import livro from '../../imagens/livro1.png'
+import livro from '../../images/livro1.png'
 
 export const livros = [
   {
@@ -27,7 +27,7 @@ export const livros = [
     src: livro,
   },
   {
-    nome: 'Java Aventures',
+    nome: 'Java Dircovery',
     id: 6,
     src: livro,
   },

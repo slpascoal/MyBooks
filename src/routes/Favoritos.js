@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Pesquisa } from '../componentes/Pesquisa'
+import { Pesquisa } from '../components/Pesquisa'
 
 const AppContainer = styled.div`
     height: 100vh;

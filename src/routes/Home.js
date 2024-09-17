@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Pesquisa } from '../componentes/Pesquisa'
-import { UltimosLancamentos } from '../componentes/UltimosLancamentos'
+import { Pesquisa } from '../components/Pesquisa'
+import { UltimosLancamentos } from '../components/UltimosLancamentos'
 
 const AppContainer = styled.div`
     height: 100vh;

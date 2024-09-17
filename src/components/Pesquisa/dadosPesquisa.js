@@ -1,4 +1,4 @@
-import livro from '../../imagens/livro1.png'
+import livro from '../../images/livro1.png'
 
 export const livros = [
   {

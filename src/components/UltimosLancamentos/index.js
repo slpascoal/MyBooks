@@ -2,7 +2,7 @@ import { CardRecomenda } from '../CardRecomenda'
 import { Titulo } from '../Titulo'
 import { livros } from './dadosUltimosLancamentos'
 import styled from 'styled-components'
-import livroRecomendado from '../../imagens/livro2.png'
+import livroRecomendado from '../../images/livro2.png'
 
 const UltimosLancamentosContainer = styled.section`
     background-color: #EBECEE;
