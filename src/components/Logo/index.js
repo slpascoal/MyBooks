@@ -16,7 +16,7 @@ function Logo() {
     <LogoContainer>
       <img src={logo} alt="logo" className="logo-img"></img>
       <p>
-        <strong>Alura</strong>Books
+        <strong>My</strong>Books
       </p>
     </LogoContainer>
   )

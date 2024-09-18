@@ -16,19 +16,4 @@ export const livros = [
     id: 3,
     src: livro,
   },
-  {
-    nome: 'liderança em JS e Java',
-    id: 4,
-    src: livro,
-  },
-  {
-    nome: 'JS acertivo',
-    id: 5,
-    src: livro,
-  },
-  {
-    nome: 'Java Dircovery',
-    id: 6,
-    src: livro,
-  },
 ]

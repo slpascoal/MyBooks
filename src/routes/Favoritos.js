@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import livroImg from '../images/livro1.png'
 import { useEffect, useState } from 'react'
-import { getFavoritos } from '../services/favoritos'
+import { deleteFavoritos, getFavoritos } from '../services/favoritos'
 
 const AppContainer = styled.div`
     height: 100vh;
@@ -66,6 +66,12 @@ function Favoritos() {
     fetchFavoritos()
   }, [])
 
+  async function deletarFavoritos(id) {
+    await deleteFavoritos(id)
+    fetchFavoritos()
+    alert('Livro deletado de seus favoritos')
+  }
+
   return (
     <AppContainer>
       <div>
@@ -76,7 +82,12 @@ function Favoritos() {
                 <Resultado>
                   <p>{favorito.nome}</p>
                   <img src={livroImg} alt={favorito.nome} />
-                  <BotaoExcluir type="button">Excluir</BotaoExcluir>
+                  <BotaoExcluir
+                    type="button"
+                    onClick={() => deletarFavoritos(favorito.id)}
+                  >
+                    Excluir
+                  </BotaoExcluir>
                 </Resultado>
               ))
             : null}

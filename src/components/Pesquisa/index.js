@@ -2,6 +2,7 @@ import { Input } from '../Input'
 import styled from 'styled-components'
 import { useEffect, useState } from 'react'
 import { getLivros } from '../../services/livros'
+import { postFavoritos } from '../../services/favoritos'
 
 const PesquisaContainer = styled.section`
         background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -40,6 +41,7 @@ const Resultado = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 15px;
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
@@ -47,6 +49,7 @@ const Resultado = styled.div`
     transition: 0.4s;
     p {
         width: 200px;
+        margin: 0;
     }
     img {
         width: 100px;
@@ -55,6 +58,10 @@ const Resultado = styled.div`
         transform: scale(1.05);
         transition: 0.4s;
     }
+`
+
+const BotaoFavoritar = styled.button`
+  cursor: pointer;
 `
 
 export function Pesquisa() {
@@ -68,6 +75,11 @@ export function Pesquisa() {
   async function fetchLivros() {
     const livrosAPI = await getLivros()
     setLivros(livrosAPI)
+  }
+
+  async function insereFavorito(id) {
+    await postFavoritos(id)
+    alert(`Livro inserido em seus favoritos!`)
   }
 
   return (
@@ -89,6 +101,12 @@ export function Pesquisa() {
           <Resultado key={livro.id}>
             <p>{livro.nome}</p>
             <img src={livro.src} alt={livro.nome} />
+            <BotaoFavoritar
+              type="button"
+              onClick={() => insereFavorito(livro.id)}
+            >
+              Favoritar
+            </BotaoFavoritar>
           </Resultado>
         ))}
       </ResultadoContainer>
