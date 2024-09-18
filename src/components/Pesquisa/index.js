@@ -8,9 +8,11 @@ const PesquisaContainer = styled.section`
         color: #FFF;
         text-align: center;
         padding: 65px 0;
-        height: 270px;
         width: 100%;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
 `
 
 const Titulo = styled.h2`
@@ -41,6 +43,8 @@ const Resultado = styled.div`
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+
+    transition: 0.4s;
     p {
         width: 200px;
     }
@@ -48,7 +52,8 @@ const Resultado = styled.div`
         width: 100px;
     }
     &:hover {
-        border: 1px solid white;
+        transform: scale(1.1);
+        transition: 0.4s;
     }
 `
 
