@@ -1,6 +1,7 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MyBooks - Front-End
+Veja o back-end em: https://github.com/slpascoal/mybooks-server
+
 
 ## Available Scripts
 
